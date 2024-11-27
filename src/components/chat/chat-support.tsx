@@ -125,18 +125,15 @@ export default function ChatSupport() {
                 >
                   <ChatBubble
                     key={message.id}
-                    variant={message.sender === "user" ? "sent" : "received"}
+                    variant="received"
                   >
                     <ChatBubbleAvatar
-                      src={
-                        message.sender === "user"
-                          ? "https://avatars.githubusercontent.com/u/72315775?v=4"
-                          : ""
-                      }
+                      src="https://avatars.githubusercontent.com/u/72315775?v=4"
+                          
                       fallback={message.sender === "user" ? "US" : "🤖"}
                     />
                     <ChatBubbleMessage
-                      variant={message.sender === "user" ? "sent" : "received"}
+                      variant= "user"
                     >
                       {message.message}
                     </ChatBubbleMessage>
